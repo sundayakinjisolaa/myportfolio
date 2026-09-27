@@ -7,152 +7,519 @@
     <title>Sunday A. Akinlemibola | Business Analytics Portfolio</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
             line-height: 1.6;
-            color: #222;
-            background: #f7f7f7;
         }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #111827;
+            color: white;
+            padding: 18px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* HERO */
+
+        .hero {
             background: white;
-            border-radius: 12px;
-            margin-bottom: 30px;
+            padding: 90px 0;
+            text-align: center;
         }
 
-        h1 {
-            margin-bottom: 5px;
+        .hero h1 {
+            font-size: 48px;
+            margin: 0 0 10px;
+            color: #111827;
         }
 
-        .subtitle {
-            color: #666;
-            font-size: 18px;
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #4b5563;
+            margin: 0 0 25px;
         }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .button-dark {
+            background: #111827;
+            color: white;
+        }
+
+        .button-light {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 65px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        /* ABOUT */
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #4b5563;
+            font-size: 17px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .skill {
+            background: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+            border: 1px solid #e5e7eb;
+            font-size: 14px;
+        }
+
+        /* PROJECT */
 
         .project {
             background: white;
-            padding: 30px;
-            margin-bottom: 25px;
             border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
         }
 
-        .buttons a {
-            display: inline-block;
-            margin: 8px 8px 0 0;
-            padding: 10px 16px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
+        .project h3 {
+            font-size: 25px;
+            margin-top: 0;
+            color: #111827;
         }
 
-        .buttons a:hover {
-            opacity: 0.8;
+        .project-type {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 18px;
         }
+
+        .project-description {
+            color: #4b5563;
+        }
+
+        /* METRICS */
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .metric {
+            background: #f9fafb;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 25px;
+            color: #111827;
+        }
+
+        .metric span {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* PROJECT BUTTONS */
+
+        .project-buttons {
+            margin-top: 25px;
+        }
+
+        /* COMING SOON */
 
         .coming-soon {
-            color: #777;
+            text-align: center;
+            color: #6b7280;
+            padding: 20px;
         }
 
+        /* FOOTER */
+
         footer {
+            background: #111827;
+            color: #d1d5db;
             text-align: center;
-            color: #777;
-            margin-top: 40px;
+            padding: 30px 0;
+            margin-top: 30px;
         }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <h1>Sunday A. Akinlemibola</h1>
+<!-- NAVIGATION -->
 
-    <div class="subtitle">
-        Business Analytics Portfolio
+<nav>
+    <div class="container nav-inner">
+
+        <div class="logo">
+            Sunday A.
+        </div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="container">
+
+        <h1>Sunday A. Akinlemibola</h1>
+
+        <h2>Business Analytics Portfolio</h2>
+
+        <p>
+            Business analytics projects focused on turning real-world data
+            into practical business insights and decisions.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a class="button button-dark"
+               href="https://github.com/sundayakinjisolaa"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a class="button button-light"
+               href="https://www.linkedin.com/"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
     </div>
 
-    <p>
-        Business analytics projects using Python, SQL, DuckDB,
-        Power BI and real-world datasets.
-    </p>
 </header>
 
 
-<section class="project">
+<!-- ABOUT -->
 
-    <h2>NYC Yellow Taxi Commercial Analytics</h2>
+<section id="about">
 
-    <p>
-        <strong>Commercial Analytics | Python · DuckDB · SQL · Power BI</strong>
-    </p>
+    <div class="container">
 
-    <p>
-        Analysed more than 75 million real NYC Yellow Taxi trips
-        from January 2025 to July 2026 to examine demand,
-        revenue, geographic and operational performance.
-    </p>
+        <h2 class="section-title">About</h2>
 
-    <div class="buttons">
-
-        <a href="https://github.com/sundayakinjisolaa/nyc-yellow-taxi-commercial-analytics"
-           target="_blank">
-            💻 View GitHub Project
-        </a>
-
-        <a href="https://github.com/sundayakinjisolaa/nyc-yellow-taxi-commercial-analytics/blob/main/NYC_Yellow_Taxi_Portfolio_Sunday_Akinlemibola_FINAL_v2.pdf"
-           target="_blank">
-            📄 View Case Study PDF
-        </a>
-
-        <a href="#">
-            📊 Power BI Dashboard
-        </a>
+        <p class="about">
+            I am a Business Analytics professional interested in using
+            data to understand commercial performance, operational
+            problems and business opportunities. My projects combine
+            Python, SQL, DuckDB and Power BI with real-world datasets
+            to produce practical, decision-focused analysis.
+        </p>
 
     </div>
 
 </section>
 
 
-<section class="project">
+<!-- SKILLS -->
 
-    <h2>Australian Transport Operations Analytics</h2>
+<section id="skills">
 
-    <p>
-        <strong>Operations Analytics | Python · DuckDB · Power BI</strong>
-    </p>
+    <div class="container">
 
-    <p class="coming-soon">
-        Coming soon.
-    </p>
+        <h2 class="section-title">Tools & Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">DuckDB</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Data Visualisation</div>
+            <div class="skill">Business Analysis</div>
+            <div class="skill">Commercial Analytics</div>
+            <div class="skill">Operations Analytics</div>
+            <div class="skill">Predictive Analytics</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project">
+
+            <h3>🚕 NYC Yellow Taxi Commercial Analytics</h3>
+
+            <div class="project-type">
+                Commercial Analytics · Python · DuckDB · SQL · Power BI
+            </div>
+
+            <p class="project-description">
+                Analysed more than 75 million real NYC Yellow Taxi trips
+                from January 2025 to July 2026 to understand demand,
+                revenue, geographic performance and operational patterns.
+            </p>
+
+
+            <div class="metrics">
+
+                <div class="metric">
+                    <strong>75M+</strong>
+                    <span>Trips analysed</span>
+                </div>
+
+                <div class="metric">
+                    <strong>$791M</strong>
+                    <span>Jan–Jul 2026 revenue</span>
+                </div>
+
+                <div class="metric">
+                    <strong>+7.4%</strong>
+                    <span>Revenue vs matched 2025</span>
+                </div>
+
+                <div class="metric">
+                    <strong>+11.9%</strong>
+                    <span>Revenue per trip</span>
+                </div>
+
+            </div>
+
+
+            <p>
+                <strong>Key finding:</strong>
+                Revenue increased while trip volume declined in the
+                matched January–July period, indicating higher observed
+                revenue per trip rather than growth being driven simply
+                by more trips.
+            </p>
+
+
+            <div class="project-buttons">
+
+                <a class="button button-dark"
+                   href="https://github.com/sundayakinjisolaa/nyc-yellow-taxi-commercial-analytics"
+                   target="_blank">
+                    💻 GitHub Project
+                </a>
+
+                <a class="button button-light"
+                   href="https://github.com/sundayakinjisolaa/nyc-yellow-taxi-commercial-analytics/blob/main/NYC_Yellow_Taxi_Portfolio_Sunday_Akinlemibola_FINAL_v2.pdf"
+                   target="_blank">
+                    📄 Case Study PDF
+                </a>
+
+                <a class="button button-light"
+                   href="#">
+                    📊 Power BI Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project">
+
+            <h3>🚌 Australian Transport Operations Analytics</h3>
+
+            <div class="project-type">
+                Operations Analytics · Python · DuckDB · Power BI
+            </div>
+
+            <p class="project-description coming-soon">
+                Real-world Australian transport data project examining
+                demand, service performance and operational KPIs.
+            </p>
+
+            <div class="coming-soon">
+                <strong>Coming soon</strong>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project">
+
+            <h3>📈 Predictive / Decision Analytics</h3>
+
+            <div class="project-type">
+                Predictive Analytics · Python · SQL · Power BI
+            </div>
+
+            <p class="project-description coming-soon">
+                A real-world business problem using predictive analysis
+                to support a practical business decision.
+            </p>
+
+            <div class="coming-soon">
+                <strong>Coming soon</strong>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section class="project">
-
-    <h2>Predictive / Decision Analytics</h2>
-
-    <p>
-        <strong>Predictive Analytics | Python · SQL · Power BI</strong>
-    </p>
-
-    <p class="coming-soon">
-        Coming soon.
-    </p>
-
-</section>
-
+<!-- FOOTER -->
 
 <footer>
-    <p>
-        Sunday A. Akinlemibola · Business Analytics
-    </p>
+
+    <div class="container">
+
+        <p>
+            Sunday A. Akinlemibola · Business Analytics
+        </p>
+
+        <p>
+            <a href="https://github.com/sundayakinjisolaa"
+               target="_blank">
+                GitHub
+            </a>
+        </p>
+
+    </div>
+
 </footer>
+
 
 </body>
 </html>
